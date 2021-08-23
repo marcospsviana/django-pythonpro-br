@@ -2,4 +2,4 @@
 
 ![devpro](../static/devpro_logo.png)
 
-![travisci](https://app.travis-ci.com/marcospsviana/django-pythonpro-br.svg?branch=main)
+![Build Status](https://app.travis-ci.com/marcospsviana/django-pythonpro-br.svg?branch=main)
