@@ -5,7 +5,7 @@ install:
   - pip install -r requirements-dev.txt
 script:
   - flake8
-  - pytest
+  - pytest --cov=djangopythonpro
 
 after_success:
   - codecov
