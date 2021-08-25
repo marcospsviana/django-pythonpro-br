@@ -18,6 +18,10 @@ botocore==1.21.29 \
     # via
     #   boto3
     #   s3transfer
+collectfast==2.2.0 \
+    --hash=sha256:2f6abc8cab7ec5114a7a9a3660ab629ec142556957220aa82857dc9b4381490d \
+    --hash=sha256:e716b2234ab50b5f1010b0d78c3fae8c6aebdb8b7c66ef5568503c33c1a5e19a
+    # via -r requirements.in
 dj-database-url==0.5.0 \
     --hash=sha256:4aeaeb1f573c74835b0686a2b46b85990571159ffc21aa57ecd4d1e1cb334163 \
     --hash=sha256:851785365761ebe4994a921b433062309eb882fedd318e1b0fcecc607ed02da9
@@ -27,6 +31,7 @@ django==3.2.6 \
     --hash=sha256:f27f8544c9d4c383bbe007c57e3235918e258364577373d4920e9162837be022
     # via
     #   -r requirements.in
+    #   collectfast
     #   django-storages
 django-s3-folder-storage==0.5 \
     --hash=sha256:eb5fd3994726f5b87ddc0ea1a6f1af3f598f9d743127c27d6dae111d18a79abe
@@ -34,7 +39,9 @@ django-s3-folder-storage==0.5 \
 django-storages==1.11.1 \
     --hash=sha256:c823dbf56c9e35b0999a13d7e05062b837bae36c518a40255d522fbe3750fbb4 \
     --hash=sha256:f28765826d507a0309cfaa849bd084894bc71d81bf0d09479168d44785396f80
-    # via django-s3-folder-storage
+    # via
+    #   collectfast
+    #   django-s3-folder-storage
 gunicorn==20.1.0 \
     --hash=sha256:9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e \
     --hash=sha256:e0a968b5ba15f8a328fdfd7ab1fcb5af4470c28aaf7e55df02a99bc13138e6e8
@@ -100,6 +107,11 @@ sqlparse==0.4.1 \
     --hash=sha256:017cde379adbd6a1f15a61873f43e8274179378e95ef3fede90b5aa64d304ed0 \
     --hash=sha256:0f91fd2e829c44362cbcfab3e9ae12e22badaa8a29ad5ff599f9ec109f0454e8
     # via django
+typing-extensions==3.10.0.0 \
+    --hash=sha256:0ac0f89795dd19de6b97debb0c6af1c70987fd80a2d62d1958f7e56fcc31b497 \
+    --hash=sha256:50b6f157849174217d0656f99dc82fe932884fb250826c18350e159ec6cdf342 \
+    --hash=sha256:779383f6086d90c99ae41cf0ff39aac8a7937a9283ce0a414e5dd782f4c94a84
+    # via collectfast
 urllib3==1.26.6 \
     --hash=sha256:39fb8672126159acb139a7718dd10806104dec1e2f0f6c88aab05d17df10c8d4 \
     --hash=sha256:f57b4c16c62fa2760b7e3d97c35b255512fb6b59a259730f36ba32ce9f8e342f
