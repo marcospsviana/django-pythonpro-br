@@ -4,6 +4,12 @@ python:
 install:
   - pip install -r requirements-dev.txt
   - cp contrib/env-sample .env
+services:
+  - postgresql
+addons:
+  postgresql: "9.4"
+before_script:
+  - psql -c "CREATE DATABASE testedb;" -U postgres
 script:
   - flake8
   - pytest --cov=djangopythonpro.base
