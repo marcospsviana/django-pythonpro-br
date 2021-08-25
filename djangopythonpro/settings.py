@@ -119,6 +119,7 @@ USE_TZ = True
 
 # DEV ENVIRONMENT
 STATIC_URL = "/static/"
+
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 MEDIA_URL = "/media/"
@@ -135,10 +136,12 @@ if AWS_ACCESS_KEY_ID:
     AWS_S3_OBJECT_PARAMETERS = {
         "CacheControl": "max-age=86400",
     }
+
     AWS_PRELOAD_METADATA = True
     AWS_AUTO_CREATE_BUCKET = False
     AWS_QUERYSTRING_AUTH = True
     AWS_S3_CUSTOM_DOMAIN = None
+
     COLLECTFAST_ENABLED = True
     AWS_DEFAULT_ACL = "private"
 
@@ -159,6 +162,7 @@ if AWS_ACCESS_KEY_ID:
 
     INSTALLED_APPS.append("s3_folder_storage")
     INSTALLED_APPS.append("storages")
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
