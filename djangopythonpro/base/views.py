@@ -9,6 +9,7 @@ def home(request):
     return HttpResponse("""
     <html>
 <head>
+<meta charset='utf-8'>
      <meta content='text/html'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Document</title>
