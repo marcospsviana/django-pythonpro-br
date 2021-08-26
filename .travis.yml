@@ -12,7 +12,7 @@ before_script:
   - psql -c "CREATE DATABASE testedb;" -U postgres
 script:
   - flake8
-  - pytest --cov=djangopythonpro.base
+  - pytest --cov=djangopythonpro.base.tests
 
 after_success:
   - codecov
