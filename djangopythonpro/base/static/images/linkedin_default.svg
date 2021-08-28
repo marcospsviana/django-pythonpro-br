@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 135.46667 135.46667"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
+   sodipodi:docname="linkedin_default.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.40283203"
+     inkscape:cx="-1432.3588"
+     inkscape:cy="-160.11636"
+     inkscape:window-width="2560"
+     inkscape:window-height="1010"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#ffccaa;stroke:none;stroke-width:0.179035"
+       d="M 14.022914,14.022914 V 121.44376 H 121.44376 V 14.022914 H 14.022914 m 19.872853,11.330999 c 1.57999,-0.205818 3.32933,-0.101047 4.833938,0.431421 9.535748,3.37475 8.740475,18.203872 -1.611306,19.72352 -1.610418,0.236325 -3.277233,0.15576 -4.833938,-0.339093 -9.928709,-3.155665 -8.883307,-18.44872 1.611306,-19.815848 m 75.194593,83.736437 -12.35339,-0.17903 -5.012976,-0.17903 c 0.87297,-3.66664 0.179038,-8.22629 0.179038,-11.99534 0,-5.477746 0.212688,-11.008486 -0.151293,-16.471193 -0.170797,-2.565211 -0.0838,-5.040007 -0.923639,-7.519459 -2.116015,-6.2467 -10.676734,-7.833664 -15.200584,-3.040905 -3.181809,3.371045 -3.060246,8.57648 -3.060246,12.887815 V 109.26939 H 60.930014 l -5.908142,-0.17904 c 0.977702,-6.06211 0.179037,-12.835899 0.179037,-18.977684 V 53.052481 h 16.471195 v 7.519457 c 2.68104,-2.597793 4.241865,-5.468078 7.877522,-7.082791 2.8676,-1.273475 5.998379,-1.878791 9.130774,-1.868765 2.587411,0.0083 5.202039,0.38582 7.698495,1.053441 14.015915,3.74827 12.890505,21.23262 12.890505,32.604905 v 7.698493 10.742089 c 0,1.69886 0.30382,3.73771 -0.17904,5.37104 M 43.921718,53.052481 v 13.248568 26.676172 10.204989 l 0.179037,5.55008 -5.37105,0.17903 H 26.555347 V 53.052481 Z"
+       id="path935"
+       inkscape:export-filename="/home/marcos/development/django-pythonpro-br/djangopythonpro/static/linkedin.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>
