@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # local apps
     "djangopythonpro.base",
+    "djangopythonpro.demo",
 ]
 
 MIDDLEWARE = [

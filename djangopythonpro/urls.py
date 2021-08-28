@@ -9,7 +9,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include('djangopythonpro.base.urls')),
+    path("", include("djangopythonpro.base.urls")),
+    path("demonstrativo/", include("djangopythonpro.demo.urls")),
     # path("sentry-debug/", trigger_error),
 ]
 

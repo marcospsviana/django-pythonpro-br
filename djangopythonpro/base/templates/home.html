@@ -27,11 +27,11 @@
       media="screen,projection"
     />
   </head>
-  <body onload="pisca()">
+  <body>
     <div class="darkness">
-      <nav class="lighten-1 dark2" role="navigation">
+      <nav class="lighten-1 dark2 destaque" role="navigation">
         <div class="nav-wrapper container">
-          <a id="logo-container" href="#" class="brand-logo">Logo</a>
+          <a id="logo-container" href="#" class="brand-logo"><img src="{% static 'images/devpro_logo.png' %}" </a>
           <ul class="right hide-on-med-and-down">
             <li><a href="#">Navbar Link</a></li>
           </ul>
@@ -47,7 +47,7 @@
       <div class="section no-pad-bot" id="index-banner">
         <div class="container">
           <br /><br />
-          <h1 class="header center white-text">Starter Template</h1>
+          <h1 class="header center destaque"> Os Fodásticos </h1>
           <div class="row center">
             <h5 class="header col s12 light">
               A modern responsive front-end framework based on Material Design
@@ -72,9 +72,9 @@
             <div class="col s12 m4">
               <div class="icon-block">
                 <h2 class="center orange-text">
-                  <i class="material-icons">flash_on</i>
+                  <i class="material-icons destaque">flash_on</i>
                 </h2>
-                <h5 class="center">Speeds up development</h5>
+                <h5 class="center destaque">Speeds up development</h5>
 
                 <p class="normal">
                   We did most of the heavy lifting for you to provide a default
@@ -88,9 +88,9 @@
             <div class="col s12 m4">
               <div class="icon-block">
                 <h2 class="center red-text">
-                  <i id="cursorCode" class="material-icons">favorite_border</i>
+                  <i id="cursorCode" class="material-icons destaque">favorite_border</i>
                 </h2>
-                <h5 class="center">User Experience Focused</h5>
+                <h5 class="center destaque">User Experience Focused</h5>
 
                 <p class="normal">
                   By utilizing elements and principles of Material Design, we
@@ -105,9 +105,9 @@
             <div class="col s12 m4">
               <div class="icon-block">
                 <h2 class="center light-blue-text">
-                  <i class="material-icons">settings</i>
+                  <i class="material-icons destaque">settings</i>
                 </h2>
-                <h5 class="center">Easy to work with</h5>
+                <h5 class="center destaque">Easy to work with</h5>
 
                 <p class="normal">
                   We have provided detailed documentation as well as specific
@@ -126,7 +126,7 @@
         <div class="container">
           <div class="row">
             <div class="col l6 s12">
-              <h5 class="white-text">Company Bio</h5>
+              <h5 class="destaque">Company Bio</h5>
               <p class="grey-text text-lighten-4">
                 We are a team of college students working on this project like
                 it's our full time job. Any amount would help support and
@@ -135,7 +135,7 @@
             </div>
             {% comment %}
             <div class="col l3 s12">
-              <h5 class="white-text">Settings</h5>
+              <h5 class="destaque">Settings</h5>
               <ul>
                 <li><a class="white-text" href="#!">Link 1</a></li>
                 <li><a class="white-text" href="#!">Link 2</a></li>
@@ -163,15 +163,20 @@
               href="http://materializecss.com"
               >Marcos P S Viana</a
             >
-            © {% now 'Y' %} 
-            <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
-            <form
-              action="https://pagseguro.uol.com.br/checkout/v2/donation.html"
-              method="post"
-            > <ul>
+            © {% now 'Y' %}
+
             
-                <li><a class="white-text" href="#!"><img class="socials" src="{% static 'images/linkedin.svg' %}"></a></li>
-                </ul>
+            
+            <div class="links">
+                <a  href="#!">
+                <div class="linkedin"></div>
+                    </a>
+            <a  href="#!">
+                <div class="gmail"></div>
+                    </a>
+               </div>
+            <div class="donate">
+           
             <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
 <form action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post">
 <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
@@ -181,6 +186,7 @@
 <input class="darkness" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/120x53-doar-laranja.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
 </form>
 <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+              </div>
           </div>
         </div>
       </footer>
@@ -189,24 +195,6 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="{% static 'js/materialize.js' %}"></script>
     <script src="{% static 'js/init.js' %}"></script>
-    <script>
-
-
-      pisca(){
-           while true{
-             setTimeout(setHide(), 3000);
-             setTimeout(setShow(), 3000);
-          }
-
-          setHide(){
-              document.getElementById('cursorCode').style.visibility = 'hidden';
-          }
-          setShow(){
-              document.getElementById('cursorCode').style.visibility = 'visible';
-          }
-
-
-      }
-    </script>
+    
   </body>
 </html>
