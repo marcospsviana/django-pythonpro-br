@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1.0"
     />
-    <title>Starter Template - Materialize</title>
+    <title>Python Pro Fodásticos</title>
 
     <!-- CSS  -->
     <link
@@ -37,7 +37,7 @@
           </ul>
 
           <ul id="nav-mobile" class="sidenav">
-            <li><a href="#">Navbar Link</a></li>
+            <li><a href="{% url 'base:home' %}">home</a></li>
           </ul>
           <a href="#" data-target="nav-mobile" class="sidenav-trigger"
             ><i class="material-icons">menu</i></a
@@ -163,7 +163,24 @@
               href="http://materializecss.com"
               >Marcos P S Viana</a
             >
-            copyright {% now 'Y' %}
+            © {% now 'Y' %} 
+            <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+            <form
+              action="https://pagseguro.uol.com.br/checkout/v2/donation.html"
+              method="post"
+            > <ul>
+            
+                <li><a class="white-text" href="#!"><img class="socials" src="{% static 'images/linkedin.svg' %}"></a></li>
+                </ul>
+            <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+<form action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post">
+<!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+<input type="hidden" name="currency" value="BRL" />
+<input type="hidden" name="receiverEmail" value="marcospaulo.silvaviana@gmail.com" />
+<input type="hidden" name="iot" value="button" />
+<input class="darkness" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/doacoes/120x53-doar-laranja.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+</form>
+<!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
           </div>
         </div>
       </footer>
