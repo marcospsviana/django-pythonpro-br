@@ -1,4 +1,3 @@
-
 /* Custom Stylesheet */
 /**
  * Use this file to override Materialize files so you can update
@@ -8,100 +7,99 @@
  */
 
 .icon-block {
-  padding: 0 15px;
+    padding: 0 15px;
 }
 .icon-block .material-icons {
-	font-size: inherit;
+    font-size: inherit;
 }
 
-.darkness{
-  font-size: 1.3em;
-  background-color: rgb(31, 29, 29);
-  color: rgb(250, 244, 241);
+.darkness {
+    font-size: 1.3em;
+    background-color: rgb(31, 29, 29);
+    color: rgb(250, 244, 241);
 }
 
-.dark2{
-  background-color: rgb(19, 11, 6);
+.dark2 {
+    background-color: rgb(19, 11, 6);
 }
-.bt-orange-a{
-  background-color: #E6C08E;
-color : rgb(19, 11, 6);
-
-}
-
-
-.socials{
-  height: 3em;
-  color: #E6C08E;
-}
-
-.destaque{
-color: #E6C08E
-}
-
-.icon-socials{
-height : 2em;
-width : 2em;
-
-background-color: #E6C08E;
-color: rgb(20, 13, 10);
+.bt-orange-a {
+    background-color: #E6C08E;
+    color: rgb(19, 11, 6);
 
 }
 
-.linkedin{
-height : 2.1em;
-width : 2.1em;
-color: #E6C08E;
-background: url("../images/linkedin_default.svg")  no-repeat center;
--webkit-background-size: contain;
--moz-background-size: contain;
--o-background-size: contain;
-background-size: contain;
+
+.socials {
+    height: 3em;
+    color: #E6C08E;
+}
+
+.destaque {
+    color: #E6C08E
+}
+
+.icon-socials {
+    height: 2em;
+    width: 2em;
+
+    background-color: #E6C08E;
+    color: rgb(20, 13, 10);
 
 }
 
-.linkedin:hover{
-height : 2.1em;
-width : 2.1em;
-color: #E6C08E;
-background: url("../images/linkedin.svg")  no-repeat center;
--webkit-background-size: contain;
--moz-background-size: contain;
--o-background-size: contain;
-background-size: contain;
+.linkedin {
+    height: 1.5em;
+    width: 1.5em;
+    color: #E6C08E;
+    background: url("../images/linkedin_default.svg") no-repeat center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
 
 }
 
-.gmail{
-height : 2.1em;
-width : 2.1em;
-color:  #E6C08E;
-background: url("../images/gmail_default.svg")  no-repeat center;
--webkit-background-size: contain;
--moz-background-size: contain;
--o-background-size: contain;
-background-size: contain;
+.linkedin:hover {
+    height: 1.5em;
+    width: 1.5em;
+    color: #E6C08E;
+    background: url("../images/linkedin.svg") no-repeat center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
 
 }
 
-.gmail:hover{
-height : 2.1em;
-width : 2.1em;
-color:  #E6C08E;
-background: url("../images/gmail.svg")  no-repeat center;
--webkit-background-size: contain;
--moz-background-size: contain;
--o-background-size: contain;
-background-size: contain;
+.gmail {
+    height: 1.5em;
+    width: 1.5em;
+    color: #E6C08E;
+    background: url("../images/gmail_default.svg") no-repeat center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
 
 }
 
-.links{
-display: flex;
+.gmail:hover {
+    height: 1.5em;
+    width: 1.5em;
+    color: #E6C08E;
+    background: url("../images/gmail.svg") no-repeat center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
 
 }
 
-.donate{
-float: right
+.links {
+    display: flex;
+
 }
 
+.donate {
+    float: right
+}

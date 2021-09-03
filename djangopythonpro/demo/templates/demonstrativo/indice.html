@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block content %}
+
+    <ul class="collection" style="color: rgb(24, 23, 23);">
+      {% for v in video %}
+      <li class="collection-item"><a href="{{ v.get_absolute_url }}">{{v.slug }}  -  {{v.titulo}}</a></li>
+      {% empty %}
+      <h5 style="color: #fff;"> Não há vídeos para serem exibidos </h5>
+      
+      {% endfor %}
+    </ul>
+            
+{% endblock content %}
