@@ -6,5 +6,5 @@ from djangopythonpro.base.views import home
 app_name = "base"
 urlpatterns = [
     path("", home, name="home"),
-    path("demonstrativo/", include('djangopythonpro.demo.urls')),
+    path("demonstrativo/", include("djangopythonpro.demo.urls")),
 ]

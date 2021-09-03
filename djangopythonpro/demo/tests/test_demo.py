@@ -4,6 +4,12 @@ import pytest
 from django.urls import reverse
 from djangopythonpro.demo.models import Videos
 from djangopythonpro.django_assertions import assert_contains
+import os
+from django.settings import setup
+
+
+os.environ.default("DJANGO_SETTINGS_MODULE", "djangopythonpro.settings")
+setup()
 
 
 @pytest.fixture
@@ -31,22 +37,3 @@ def test_titulo_video(resp, videos):
 
 def test_conteudo_video(resp, videos):
     assert_contains(resp, videos.video_id)
-
-
-# @pytest.mark.parametrize(
-#     "titulo",
-#     {
-#         "renzo": {
-#             "slug": "renzo",
-#             "titulo": "os fodásticos do python dev pro",
-#             "video_id": "a61p-g0yWts",
-#         },
-#         "rocha-bruno": {
-#             "slug": "rocha-bruno",
-#             "titulo": "Coisas que NÃO devemos fazer ao programar em PYTHON - Codeshow",
-#             "video_id": "p4jWEC7vuKI",
-#         },
-#     },
-# )
-# def test_titulo_video(resp, titulo):
-#     assert_contains(resp, titulo)
