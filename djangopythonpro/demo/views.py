@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_list_or_404
 from djangopythonpro.demo.models import Videos
+
+# from django.http.response import HttpResponseNotFound
 
 
 # videos_class = [
@@ -31,6 +33,5 @@ def indice(request):
 
 
 def video(request, slug):
-    video_data = Videos.objects.filter(slug=slug)
-    print(f"video_data {video_data}")
+    video_data = get_list_or_404(Videos, slug=slug)
     return render(request, "demonstrativo/video.html", context={"video": video_data})

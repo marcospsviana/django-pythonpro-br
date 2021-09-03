@@ -11,8 +11,8 @@ services:
 addons:
   postgresql: "9.4"
 env:
-  - AWS_ACCESS_KEY_ID=${{ environments.AWS_ACCESS_KEY_ID }}
-  - AWS_STORAGE_BUCKET_NAME=${{ environments.AWS_STORAGE_BUCKET_NAME }}
+  - AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}
+
 before_script:
   - psql -c "CREATE DATABASE testedb;" -U postgres
 script:
