@@ -1,12 +1,22 @@
 {% extends 'base.html' %} {% block content %}
 {% for v in video%}
-<h3>{{ v.titulo|default:"tenta outra" }}</h3>
-<iframe src="https://www.youtube.com/embed/{{ v.video_id}}" width="560" height="315"
+
+<div class="center">
+  <h5>{{ v.titulo|default:"tenta outra" }}</h5>
+<iframe  src="https://www.youtube.com/embed/{{ v.video_id}}" width="1080" height="720"
   title="YouTube video player"
   frameborder="50"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
 >
 </iframe>
+</div>
+
 {% endfor %}
+<div class="right">
+  mais vídeos do autor <br>
+  {% for v in video %}
+  <b> {{ v.titulo }}</b>
+  {% endfor %}
+</div>
 {% endblock content %}

@@ -8,12 +8,15 @@ from djangopythonpro.django_assertions import assert_contains
 
 @pytest.fixture
 def videos(db):
-    db_filter = Videos.objects.filter(slug="renzo")
-    return db_filter
+    video = Videos(
+        slug="renzo", titulo="os fodásticos do python dev pro", video_id="a61p-g0yWts"
+    )
+    video.save()
+    return video
 
 
 @pytest.fixture
-def resp(client, db):
+def resp(client, videos):
     return client.get(reverse("demo:video", args=("renzo",)))
 
 
@@ -22,13 +25,12 @@ def test_status_code(resp, videos):
 
 
 def test_titulo_video(resp, videos):
-    for v in videos:
-        assert_contains(resp, v.titulo)
+    # for v in videos:
+    assert_contains(resp, videos.titulo)
 
 
 def test_conteudo_video(resp, videos):
-    for v in videos:
-        assert_contains(resp, v.video_id)
+    assert_contains(resp, videos.video_id)
 
 
 # @pytest.mark.parametrize(
