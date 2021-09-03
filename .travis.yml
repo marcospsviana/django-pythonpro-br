@@ -1,6 +1,8 @@
 Language: python
 python:
   - 3.9
+before_install:
+  - export "DJANGO_SETTINGS_MODULE=djangopythonpro.settings"
 install:
   - pip install -r requirements-dev.txt
   - cp contrib/env-sample .env
@@ -8,6 +10,9 @@ services:
   - postgresql
 addons:
   postgresql: "9.4"
+env:
+  - AWS_ACCESS_KEY_ID=${{ environments.AWS_ACCESS_KEY_ID }}
+  - AWS_STORAGE_BUCKET_NAME=${{ environments.AWS_STORAGE_BUCKET_NAME }}
 before_script:
   - psql -c "CREATE DATABASE testedb;" -U postgres
 script:

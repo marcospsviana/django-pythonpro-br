@@ -1,8 +1,13 @@
 from django.urls import reverse
 from djangopythonpro.django_assertions import assert_contains
 import pytest
-# from model_mommy import mommy
 from djangopythonpro.demo.models import Videos
+import os
+from django.settings import setup
+
+
+os.environ.default("DJANGO_SETTINGS_MODULE", "djangopythonpro.settings")
+setup()
 
 
 @pytest.fixture

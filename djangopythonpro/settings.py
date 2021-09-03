@@ -37,6 +37,10 @@ ALLOWED_HOSTS = config("ALLOWED_HOSTS", cast=Csv())
 # Application definition
 
 INSTALLED_APPS = [
+    # local apps
+    "djangopythonpro.base",
+    "djangopythonpro.demo",
+    # default
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -45,9 +49,6 @@ INSTALLED_APPS = [
     # collectfast s3
     "collectfast",
     "django.contrib.staticfiles",
-    # local apps
-    "djangopythonpro.base",
-    "djangopythonpro.demo",
 ]
 
 MIDDLEWARE = [

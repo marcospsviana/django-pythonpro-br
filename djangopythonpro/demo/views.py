@@ -32,5 +32,5 @@ def indice(request):
 
 def video(request, slug):
     video_data = Videos.objects.filter(slug=slug)
-    print(f'video_data {video_data}')
+    print(f"video_data {video_data}")
     return render(request, "demonstrativo/video.html", context={"video": video_data})
