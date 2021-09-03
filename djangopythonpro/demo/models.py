@@ -1,3 +1,7 @@
-# from django.db import models
+from django.db import models
 
-# Create your models here.
+
+class Videos(models.Model):
+    slug = models.CharField(max_length=35)
+    titulo = models.CharField(max_length=60)
+    video_id = models.CharField(max_length=35)
