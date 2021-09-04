@@ -1,50 +1,8 @@
-# name: DJANGO-PYTHONPRO-CI
-
-# # Controls when the workflow will run
-# on: pull_request
-
-# jobs:
-#   # This workflow contains a single job called "build"
-#   build:
-#     # The type of runner that the job will run on
-#     runs-on: ubuntu-20.04
-#     services:
-#       # Label used to access the service container
-#       postgres:
-#         # Docker Hub image
-#         image: postgres 9.4
-#         # Provide the password for postgres
-#         # Set health checks to wait until postgres has started
-#         options: >-
-#           --health-cmd pg_isready
-#           --health-interval 10s
-#           --health-timeout 5s
-#           --health-retries 5
-
-#     env:
-#       POSTGRES_PASSWORD: postgres
-#       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-#       SECRET_KEY: ${{ secrets.SECRET_KEY}}
-#       ALLOWED_HOSTS: ${{ secrets.ALLOWED_HOSTS}}
-#       DJANGO_SETTINGS_MODULE: djangopythonpro.settings
-
-#     # Steps represent a sequence of tasks that will be executed as part of the job
-#     steps:
-#       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-#       - uses: actions/checkout@v2
-
-#       # Runs a set of commands using the runners shell
-#       - name: install dependences
-#         run: |
-#           sudo apt install python3-testresources
-#           pip install -r requirements-dev.txt
-
-#           flake8
-#           pytest --cov=djangopythonpro
-
 name: CI
 
-on: pull_request
+on:
+  pull_request:
+    branches: [main]
 
 jobs:
   ci:
@@ -54,24 +12,20 @@ jobs:
         python-version: ["3.9"]
         os: [ubuntu-20.04]
     runs-on: ${{ matrix.os }}
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      SECRET_KEY: ${{ secrets.SECRET_KEY }}
+      ALLOWED_HOSTS: ${{ secrets.ALLOWED_HOSTS}}
+      DJANGO_SETTINGS_MODULE: djangopythonpro.settings
+      # Set health checks to wait until postgres has started
     services:
-      # Label used to access the service container
       postgres:
-        # Docker Hub image
-        image: postgres
-        # Provide the password for postgres
+        image: postgres:9.5
         env:
+          POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
-          AWS_ACCESS_KEY_ID: ${{ django-pythonpro-br.AWS_ACCESS_KEY_ID }}
-          SECRET_KEY: ${{ django-pythonpro-br.SECRET_KEY }}
-          ALLOWED_HOSTS: ${{ django-pythonpro-br.ALLOWED_HOSTS}}
-          DJANGO_SETTINGS_MODULE: djangopythonpro.settings
-        # Set health checks to wait until postgres has started
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
+          POSTGRES_DB: testedb
+        ports: ["5432:5432"]
 
     steps:
       - uses: actions/checkout@v2
@@ -81,11 +35,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install pytest
-          pip install codecov
-          pip install flake8
-          pip install coverage
-          pip install -r requirements.txt
+          pip install -r requirements-dev.txt
       - name: Copy env run migrations
         run: |
           cp contrib/env-sample .env
@@ -99,4 +49,9 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Test with pytest
         run: |
-          pytest pypro --cov=pypro
+          pytest .
+      - name: Coverage
+        env:
+          CODECOV_TOKEN: "df3c9988-8bde-4aab-b03e-004c841729ce"
+        run: |
+          codecov

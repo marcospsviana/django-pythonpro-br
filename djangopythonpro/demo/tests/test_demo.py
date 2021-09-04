@@ -1,25 +1,14 @@
 import pytest
 
-# from model_mommy import mommy
+from model_mommy import mommy
 from django.urls import reverse
 from djangopythonpro.demo.models import Videos
 from djangopythonpro.django_assertions import assert_contains
 
-# import os
-# from django.settings import setup
-
-
-# os.environ.default("DJANGO_SETTINGS_MODULE", "djangopythonpro.settings")
-# setup()
-
 
 @pytest.fixture
 def videos(db):
-    video = Videos(
-        slug="renzo", titulo="os fodásticos do python dev pro", video_id="a61p-g0yWts"
-    )
-    video.save()
-    return video
+    return mommy.make(Videos)
 
 
 @pytest.fixture
