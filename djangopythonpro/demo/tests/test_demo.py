@@ -1,6 +1,6 @@
 import pytest
-
 from model_mommy import mommy
+
 from django.urls import reverse
 from djangopythonpro.demo.models import Videos
 from djangopythonpro.django_assertions import assert_contains
