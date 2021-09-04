@@ -329,3 +329,7 @@ modules.xml
 
 .docker!/staticfiles/
 .docker
+
+
+settings.ini
+config.py

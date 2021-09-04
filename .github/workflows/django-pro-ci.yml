@@ -24,7 +24,7 @@ jobs:
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: testedb
+          POSTGRES_DB: testdb
         ports: ["5432:5432"]
 
     steps:
@@ -32,6 +32,10 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
+      - name: export envs
+        run: |
+          export "DJANGO_SETTINGS_MODULE=djangopythonpro.settings"
+
       - name: Install dependencies
         run: |
           pip install --upgrade pip
@@ -49,7 +53,7 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Test with pytest
         run: |
-          pytest .
+          pytest --cov=djangopythonpro
       - name: Coverage
         env:
           CODECOV_TOKEN: "df3c9988-8bde-4aab-b03e-004c841729ce"
