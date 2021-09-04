@@ -328,4 +328,10 @@ modules.xml
 .ionide
 
 .docker!/staticfiles/
+
 .docker
+
+
+settings.ini
+config.py
+
