@@ -83,7 +83,7 @@ WSGI_APPLICATION = "djangopythonpro.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-defaul_db = "sqlite3:///" + os.path.join(BASE_DIR, "db.sqlite3")
+defaul_db = "sqlite:///" + os.path.join(BASE_DIR, "db.sqlite3")
 
 database_url = partial(dj_database_url.parse, conn_max_age=600)
 
