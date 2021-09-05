@@ -1,2 +1,8 @@
 [run]
-omit= */migrations/*.py
+omit= [
+    */migrations/*.py, 
+    djangopythonpro/wsgi.py, 
+    djangopythonpro/asgi.py, 
+    djangopythonpro/**/apps.py, 
+    djangopythonpro/**/models.py
+    ]
