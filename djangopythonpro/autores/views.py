@@ -1,10 +1,11 @@
-# from django.shortcuts import render
-# from djangopythonpro.autores.models import Autores
+from django.shortcuts import render
+from django.urls import reverse
+from djangopythonpro.autores import facade_autores
 
 
-# # Create your views here.
-
-
-# # def autores():
-# #     autores = Autores.objects.order_by('titulo').all()
-# #     return render("base:home", context={"autores": autores})
+def autores(request):
+    context = facade_autores.listar_autores_ordenados()
+    return render(
+        reverse("base:home", current_app=request.resolver_match.namespace),
+        context=context,
+    )
