@@ -2,12 +2,13 @@ from django.urls import reverse
 from djangopythonpro.django_assertions import assert_contains
 import pytest
 from djangopythonpro.demo.models import Videos
-from model_mommy import mommy
+from model_bakery import baker
 
 
 @pytest.fixture
 def videos(db):
-    return mommy.make(Videos, 3)
+    videos_all = baker.make(Videos, _quantity=3)
+    return videos_all
 
 
 @pytest.fixture

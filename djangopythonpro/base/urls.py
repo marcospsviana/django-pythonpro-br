@@ -9,6 +9,6 @@ urlpatterns = [
     path("demonstrativo/", include("djangopythonpro.demo.urls")),
     path(
         "autores/",
-        include("djangopythonpro.autores.urls"),
+        include(("djangopythonpro.autores.urls", "autores"), namespace="autores"),
     ),
 ]

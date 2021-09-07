@@ -1,8 +1,8 @@
 from django.urls import path
 
-from djangopythonpro.autores.views import autores
+from djangopythonpro.autores import views
 
 app_name = "autores"
 urlpatterns = [
-    path("<slug:slug>", autores, name="detalhes"),
+    path("<slug:slug>", views.detalhes, name="detalhes"),
 ]
