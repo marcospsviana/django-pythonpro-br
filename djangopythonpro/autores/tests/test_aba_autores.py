@@ -1,23 +1,25 @@
-# import pytest
+import pytest
 
-# # from django.test import Client
-# from django.urls import reverse
-# from djangopythonpro.autores.models import Autores
-# from djangopythonpro.django_assertions import assert_contains
-# from model_mommy import mommy
-
-
-# @pytest.fixture
-# def autores(db):
-#     mommy.make(Autores, 2,)
+# from django.test import Client
+from django.urls import reverse
+from djangopythonpro.autores.models import Autores
+from djangopythonpro.django_assertions import assert_contains
+from model_bakery import baker
 
 
-# @pytest.fixture
-# def resp(client, autores):
-#     resp_autor = client.get(reverse("base:home"))
-#     return resp_autor
+@pytest.fixture
+def autores(db):
+    autores_all = baker.make(Autores, _quantity=2)
+    return autores_all
+    # return Autores.objects.order_by('order').all()
 
 
-# def test_titulos_autores(resp, autores):
-#     for autor in autores:
-#         assert_contains(resp, f'href="{autor}"')
+@pytest.fixture
+def resp(client, autores):
+    resp_autor = client.get(reverse("base:home"))
+    return resp_autor
+
+
+def test_titulos_autores(resp, autores):
+    for autor in autores:
+        assert_contains(resp, autor.slug)

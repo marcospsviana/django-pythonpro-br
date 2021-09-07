@@ -5,5 +5,5 @@ pytest-django
 pytest-cov
 codecov
 django-debug-toolbar
-model-mommy
+model-bakery
 
