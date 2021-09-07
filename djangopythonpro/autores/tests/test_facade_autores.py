@@ -1,12 +1,12 @@
 import pytest
-from model_mommy import mommy
+from model_bakery import baker
 from djangopythonpro.autores.models import Autores
 from djangopythonpro.autores import facade_autores
 
 
 @pytest.fixture
 def autores(db):
-    return [mommy.make(Autores, titulo=t) for t in Autores.objects.all()]
+    return [baker.make(Autores, titulo=t) for t in Autores.objects.all()]
 
 
 def test_listar_autores_ordenados(autores):
