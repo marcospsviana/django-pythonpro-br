@@ -30,12 +30,12 @@
   <body>
     <ul id="dropdown1" class="dropdown-content" >
       {% for autor in AUTORES %}
-  <li><a href="">{{ autor }}</a></li>
+  <li><a href="{{ autor.get_absolute_url }}">{{ autor.titulo }}</a></li>
       {% endfor %}
 </ul>
 <nav>
   <div class="nav-wrapper dark2">
-    <a href="#!" class="brand-logo">Logo</a>
+    <a  class="brand-logo" href="/">Python Pro</a>
     <ul class="right hide-on-med-and-down">
       <li><a href="sass.html">Sass</a></li>
       <li><a href="badges.html">Components</a></li>

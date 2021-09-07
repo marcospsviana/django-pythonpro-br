@@ -7,4 +7,8 @@ app_name = "base"
 urlpatterns = [
     path("", home, name="home"),
     path("demonstrativo/", include("djangopythonpro.demo.urls")),
+    path(
+        "autores/",
+        include("djangopythonpro.autores.urls"),
+    ),
 ]

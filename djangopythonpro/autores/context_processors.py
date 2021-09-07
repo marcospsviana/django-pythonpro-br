@@ -1,5 +1,5 @@
-from djangopythonpro.autores import facade
+from djangopythonpro.autores import facade_autores
 
 
 def listar_autores(request):
-    return {"AUTORES": facade.listar_autores_ordenados()}
+    return {"AUTORES": facade_autores.listar_autores_ordenados()}

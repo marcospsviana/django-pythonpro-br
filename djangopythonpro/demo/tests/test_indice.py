@@ -30,4 +30,4 @@ def test_titulo_video(resp, videos):
 
 def test_link_video(resp, videos):
     for v in videos:
-        assert_contains(resp, f'{v.slug}')
+        assert_contains(resp, f"{v.slug}")

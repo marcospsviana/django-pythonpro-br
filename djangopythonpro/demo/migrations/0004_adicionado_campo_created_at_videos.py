@@ -7,14 +7,16 @@ import django.utils.timezone
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('demo', '0003_alterado_tamanho_titulo_para_60'),
+        ("demo", "0003_alterado_tamanho_titulo_para_60"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='videos',
-            name='created_at',
-            field=models.DateTimeField(auto_now_add=True, default=django.utils.timezone.now),
+            model_name="videos",
+            name="created_at",
+            field=models.DateTimeField(
+                auto_now_add=True, default=django.utils.timezone.now
+            ),
             preserve_default=False,
         ),
     ]
