@@ -1,9 +1,8 @@
-import pytest
-
 from django.urls import reverse
 from djangopythonpro.demo.models import Videos
 from djangopythonpro.django_assertions import assert_contains
 from model_bakery import baker
+import pytest
 
 
 @pytest.fixture

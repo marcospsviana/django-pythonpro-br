@@ -1,7 +1,7 @@
 import pytest
 
 # from django.test import Client
-from django.urls import reverse
+from django.shortcuts import reverse
 from djangopythonpro.autores.models import Autores
 from djangopythonpro.django_assertions import assert_contains
 from model_bakery import baker
@@ -22,4 +22,4 @@ def resp(client, autores):
 
 def test_titulos_autores(resp, autores):
     for autor in autores:
-        assert_contains(resp, autor.slug)
+        assert_contains(resp, autor)

@@ -1,5 +1,6 @@
 from ordered_model.models import OrderedModel
 from django.db import models
+from django.shortcuts import reverse
 
 
 class Autores(OrderedModel):
@@ -11,7 +12,7 @@ class Autores(OrderedModel):
         pass
 
     def get_absolute_url(self):
-        return f'autores/{self.slug}'
+        return reverse("autores:detalhes", kwargs={"slug": self.slug})
 
     def __str__(self):
         return self.titulo

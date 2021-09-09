@@ -46,12 +46,12 @@ INSTALLED_APPS = [
     # collectfast s3
     "collectfast",
     "django.contrib.staticfiles",
+    # third's apps
+    "ordered_model",
     # local apps
     "djangopythonpro.base",
     "djangopythonpro.demo",
     "djangopythonpro.autores",
-    # third's apps
-    "ordered_model",
 ]
 
 MIDDLEWARE = [
