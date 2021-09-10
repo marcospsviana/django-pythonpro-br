@@ -6,7 +6,7 @@ from djangopythonpro.autores import facade_autores
 
 @pytest.fixture
 def autores(db):
-    return [baker.make(Autores, titulo=t) for t in Autores.objects.all()]
+    return [baker.make(_model=Autores, titulo=t) for t in Autores.objects.all()]
 
 
 def test_listar_autores_ordenados(autores):

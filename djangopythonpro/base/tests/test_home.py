@@ -1,7 +1,7 @@
 import pytest
 
 # from django.test import Client
-from django.urls import reverse
+from django.shortcuts import reverse
 from djangopythonpro.django_assertions import assert_contains
 
 

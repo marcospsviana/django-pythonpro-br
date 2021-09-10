@@ -16,6 +16,10 @@ urlpatterns = [
     path("", include("djangopythonpro.base.urls")),
     path("demonstrativo/", include("djangopythonpro.demo.urls")),
     # path("sentry-debug/", trigger_error),
+    path(
+        "autores/",
+        include("djangopythonpro.autores.urls"),
+    ),
 ]
 
 DEBUG = config("DEBUG", default=False, cast=bool)
