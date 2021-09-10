@@ -5,6 +5,7 @@ from model_bakery import baker
 import pytest
 
 
+
 @pytest.fixture
 def videos(db):
     videos_all = baker.make(Videos)

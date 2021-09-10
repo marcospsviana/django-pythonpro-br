@@ -3,6 +3,7 @@ from django.db import models
 from django.shortcuts import reverse
 
 
+
 class Autores(OrderedModel):
     titulo = models.CharField(max_length=60)
     descricao = models.TextField()
@@ -13,6 +14,7 @@ class Autores(OrderedModel):
 
     def get_absolute_url(self):
         return reverse("autores:detalhes", kwargs={"slug": self.slug})
+
 
     def __str__(self):
         return self.titulo
