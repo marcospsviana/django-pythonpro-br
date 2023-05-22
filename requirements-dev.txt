@@ -103,7 +103,7 @@ pytz==2021.1
     # via django
 regex==2021.8.21
     # via black
-requests==2.26.0
+requests==2.31.0
     # via codecov
 s3transfer==0.5.0
     # via boto3
