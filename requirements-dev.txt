@@ -123,7 +123,7 @@ tomli==1.2.1
     # via black
 typing-extensions==3.10.0.0
     # via collectfast
-urllib3==1.26.6
+urllib3==2.0.7
     # via
     #   botocore
     #   requests
