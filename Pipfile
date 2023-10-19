@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+django-database-url = "*"
+botocore = "*"
+boto3 = "*"
+collectfast = "*"
+python-decouple = "*"
+sentry-sdk = "*"
+psycopg2-binary = "*"
+urllib3 = "*"
+django-ordered-model = "*"
+
+[dev-packages]
+blue = "*"
+django-debug-toolbar = "*"
+flake8 = "*"
+isort = "*"
+
+[requires]
+python_version = "3.11"
