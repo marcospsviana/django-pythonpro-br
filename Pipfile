@@ -14,12 +14,18 @@ sentry-sdk = "*"
 psycopg2-binary = "*"
 urllib3 = "*"
 django-ordered-model = "*"
+gunicorn = "*"
+django-s3-folder-storage = "*"
 
 [dev-packages]
 blue = "*"
 django-debug-toolbar = "*"
 flake8 = "*"
 isort = "*"
+pytest-django = "*"
+pytest-cov = "*"
+model-bakery = "*"
+codecov = "*"
 
 [requires]
 python_version = "3.11"
