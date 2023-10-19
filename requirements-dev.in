@@ -1,9 +1,0 @@
--r requirements.in
-black
-flake8
-pytest-django
-pytest-cov
-codecov
-django-debug-toolbar
-model-bakery
-
