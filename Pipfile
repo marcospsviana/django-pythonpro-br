@@ -20,6 +20,8 @@ blue = "*"
 django-debug-toolbar = "*"
 flake8 = "*"
 isort = "*"
+pytest-django = "*"
+pytest-cov = "*"
 
 [requires]
 python_version = "3.11"
